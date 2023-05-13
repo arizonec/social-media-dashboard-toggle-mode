@@ -1,28 +1,77 @@
 @use '../util/' as *;
 
 .toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     border: none;
+    gap: rem(12);
+
+    label {
+        &[for = "dark"] {
+           grid-column: 1 / 2; 
+           justify-self: end;
+        }
+        &[for = "system"] {
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+            justify-self: center;
+        }
+        &[for = "light"] {
+            grid-column: 3 / 4;
+            justify-self: start;
+        }
+    }
 
     &__wrapper {
-
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        height: rem(24);
+        position: relative;
     }
 
     input[type = "radio"] {
         opacity: 0;
+        margin: 0 -2px 0 -2px ;
+        height: rem(24);
+        width: rem(20);
     }
 
     &__background {
-
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        border-radius: rem(12);
+        background: linear-gradient(
+            225deg, 
+            var(--toggle-bg-end) 0, 
+            var(--toggle-bg-start) 98.02%
+            );
+        pointer-events: none ;
     }
 
     &__button {
-        width: rem(16);
-        height: rem(16);
+        position: absolute;
+        top: rem(3);
+        left: rem(3);
+        right: 100%;
+        width: rem(18);
+        height: rem(18);
         border-radius: 50%;
-        background-color: var(--toggle);
+        background-color: var(--dark-bg);
+        transition: all 150ms ease-in-out;
     }
 
-    label {
-
+    #light:checked ~ .toggle__button{
+        left: calc(100% - rem(21));
+        right: rem(3);
     }
+    
+    #system:checked ~ .toggle__button{
+        left: 50%;
+        right: auto;
+        transform: translate(-50%);
+    }
+
 }
