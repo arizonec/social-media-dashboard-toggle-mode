@@ -1,1 +1,1 @@
-html{font-size:100%;box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}body{padding:0;margin:0;font-family:var(--font-inter)}/*# sourceMappingURL=boilerplate.css.map */
+html{font-size:100%;box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}body{padding:0;margin:0;font-family:var(--font-inter);background:var(--background);color:var(--text-color)}.visually-hidden{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}/*# sourceMappingURL=boilerplate.css.map */

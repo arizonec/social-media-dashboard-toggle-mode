@@ -11,8 +11,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--font-inter);
-    background-color: var(--dark-bg);
-    color: var(--dark-text2);
+    background: var(--background);
+    color: var(--text-color);
 }
 
 .visually-hidden {

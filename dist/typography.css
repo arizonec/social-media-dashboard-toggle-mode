@@ -1,1 +1,1 @@
-h1,h2,h3{margin-top:0}a,a:visited,a:active{text-decoration:none}/*# sourceMappingURL=typography.css.map */
+h1,h2,h3{margin-top:0;line-height:1.1}h1{font-size:1.5rem;margin-bottom:.1875rem}@media(min-width: 71.875em){h1{font-size:1.75rem}}h2{font-size:1.5rem;margin-bottom:1.5rem}a,a:visited,a:active{text-decoration:none}/*# sourceMappingURL=typography.css.map */

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/style.css">
     <script defer src="dist/script.js"></script>
+    <script defer src="dist/toggle-action.js"></script>
 </head>
 <body>
     <header class="header container">
@@ -19,14 +20,14 @@
         </div>
 
         <fieldset class="header__toggle toggle" aria-label="theme toggle" role="radiogroup"> 
-            <label for="dark">Dark Mode <span class="visually-hidden">On</span> </label>
+            <label for="dark">Light Mode <span class="visually-hidden">On</span> </label>
             <div class="toggle__wrapper">
-                <input type="radio" name="theme" id="dark">
-                <input type="radio" name="theme" id="light"> 
+                <input type="radio" name="theme" id="light">
+                <input type="radio" name="theme" id="dark"> 
                 <span aria-hidden="true" class="toggle__background"></span> 
                 <span aria-hidden="true" class="toggle__button"></span> 
             </div>
-            <label for="light" class="visually-hidden">Dark Mode Off</label>
+            <label for="light" class="visually-hidden">Light Mode Off</label>
         </fieldset>
 
     </header>

@@ -5,13 +5,15 @@
     grid-template-columns: 1fr 3rem;
     border: none;
     margin: 0;
-    gap: rem(4.8) rem(8);
 
     label {
         font-size: rem(14);
+        color: var(--toggle-light);
+        font-weight: 700;
         
         &[for = 'dark'] {
             line-height: rem(24);
+            margin-right: rem(13);
         }
     }
 
@@ -25,7 +27,7 @@
         opacity: 0;
         margin: 0 -2px 0 -2px ;
         height: rem(24);
-        width: rem(20);
+        width: rem(24);
 
         &:focus ~ .toggle__button {
             border: 2px solid white;
@@ -39,11 +41,7 @@
         width: 100%;
         top: 0;
         border-radius: rem(12);
-        background: linear-gradient(
-            225deg, 
-            var(--toggle-bg-end) 0, 
-            var(--toggle-bg-start) 98.02%
-            );
+        background: var(--toggle-bg);
         pointer-events: none ;
     }
 
@@ -55,19 +53,13 @@
         width: rem(18);
         height: rem(18);
         border-radius: 50%;
-        background-color: var(--dark-bg);
+        background-color: var(--toggle-button);
         transition: all 150ms ease-in-out;
     }
 
-    #light:checked ~ .toggle__button{
+    #dark:checked ~ .toggle__button{
         left: calc(100% - rem(21));
         right: rem(3);
-    }
-    
-    #system:checked ~ .toggle__button{
-        left: 50%;
-        right: auto;
-        transform: translate(-50%);
     }
 
 }
